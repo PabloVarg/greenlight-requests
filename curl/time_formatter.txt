@@ -1,0 +1,2 @@
+\n
+time: %{time_total}s
