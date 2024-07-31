@@ -55,3 +55,9 @@ curl -is -X DELETE localhost:4000/v1/movies/2 | sed -e "s/\r//g"
 # Test long tasks
 
 curl -isw "@curl/time_formatter.txt" -X GET localhost:4000/v1/movies/1 | sed -e "s/\r//g"
+
+---
+
+# Test query parameters
+
+curl -is "localhost:4000/v1/movies?title=godfather&genres=crime,drama&page=1&page_size=5&sort=year" | sed -e "s/\r//g"
