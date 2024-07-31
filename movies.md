@@ -61,3 +61,9 @@ curl -isw "@curl/time_formatter.txt" -X GET localhost:4000/v1/movies/1 | sed -e 
 # Test query parameters
 
 curl -is "localhost:4000/v1/movies?title=godfather&genres=crime,drama&page=1&page_size=5&sort=year" | sed -e "s/\r//g"
+
+---
+
+# Test empty query parameters
+
+curl -is localhost:4000/v1/movies | sed -e "s/\r//g"
